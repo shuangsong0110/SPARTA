@@ -1,0 +1,10 @@
+# Session journal / local work logs (not part of the tutorial)
+session-logs/
+
+# R runtime artifacts
+.Rhistory
+.RData
+.Rproj.user/
+
+# Demo run output (expected results are kept in demo/expected_output/)
+demo/output/

@@ -51,6 +51,11 @@ grm_file <- "/path/to/grmout_nRandomSNPs_0.sGRM.RData"   # or NULL
 ## Output directory
 output_path <- "./step1_output/"
 
+## Optional: a config file given on the command line overrides the settings above, e.g.
+##   Rscript R/SPARTA_null_model.R demo/config_null_model.R
+args <- commandArgs(TRUE)
+if (length(args) > 0) source(args[1])
+
 ###########################################################
 #           Main function
 ###########################################################

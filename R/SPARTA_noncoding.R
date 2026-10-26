@@ -2269,6 +2269,7 @@ library(SeqArray)
 library(SeqVarTools)
 library(STAAR)
 library(STAARpipeline)
+if (!exists("na.replace.sp")) library(MetaSTAARlite)   # na.replace.sp: imputation of missing genotypes
 if(T){
   
   ### modifications: remove resetfiltering
@@ -2579,7 +2580,7 @@ geno_missing_imputation=c("mean");
 Annotation_dir <- "annotation/info/FunctionalAnnotation"
 
 ## output file name
-output_path <- ".//step4_output//"
+output_path <- paste0("./step4_output/", arrayid, "/")   # one sub-directory per array job
 output_file_name <- "Noncoding_"
 dir.create(output_path, recursive = T)
 
